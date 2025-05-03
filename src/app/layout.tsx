@@ -14,6 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    
     <html lang="en" className={poppins.variable}>
       <body className="flex flex-col min-h-screen mb-8 overflow-x-hidden">
         <NavBar />
