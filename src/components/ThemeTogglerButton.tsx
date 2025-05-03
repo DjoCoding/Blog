@@ -1,6 +1,5 @@
 "use client";
 
-import { cn } from "@/utils";
 import { useEffect, useState } from "react";
 
 export default function ThemeTogglerButton() {
