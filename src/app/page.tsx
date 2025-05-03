@@ -1,5 +1,10 @@
 import Projects from "@/components/Projects";
 import Welcome from "@/components/Welcome";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home",
+};
 
 export default function Home() {
   return (
