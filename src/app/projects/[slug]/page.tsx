@@ -2,6 +2,21 @@ import path from "path";
 import fs from "fs";
 import { notFound } from "next/navigation";
 import MarkdownContent from "@/components/MarkdownContent";
+import { Metadata } from "next";
+import { PersonalProjects } from "@/constants";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const project = PersonalProjects.find((p) => p.name === slug);
+  const title = project ? project.title : "";
+  return {
+    title,
+  } as Metadata;
+}
 
 export function generateStaticParams() {
   const dirFilePath = path.join(process.cwd(), "src/projects");

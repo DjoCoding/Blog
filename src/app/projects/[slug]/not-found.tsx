@@ -1,3 +1,12 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Blog Not Found",
+  },
+  description: "Blog page couldn't be found",
+};
+
 export default function NotFound() {
   return (
     <div className="grow flex items-center justify-center">
