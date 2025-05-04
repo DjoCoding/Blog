@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { Metadata } from "next";
 
 import path from "path";
@@ -65,12 +64,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <div className="py-4 flex items-center gap-4">
         {data.links.map((link) => (
           <div className="w-fit flex items-center py-2" key={link.href}>
-            <Link href={link.href}>
+            <a href={link.href} target="blank">
               <Icon
+                forr={link.for}
                 icon={link.icon}
                 className={cn("theme-animate text-4xl", ColorMap[link.for])}
               ></Icon>
-            </Link>
+            </a>
           </div>
         ))}
       </div>

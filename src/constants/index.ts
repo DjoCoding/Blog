@@ -47,9 +47,9 @@ export const PersonalLinks: ILinkIcon[] = [
 
 export const ColorMap: Record<string, string> = {
     linkedin: "text-linkedin",
-    discord: "text-discord",
-    github:  "text-github",
-    live:    "text-foreground"
+    discord:  "text-discord",
+    github:   "text-github",
+    live:     "text-foreground"
 }
 
 export const PersonalProjects: IProject[] = [

@@ -16,7 +16,11 @@ export default function Welcome() {
         {PersonalLinks.map((link) => (
           <li key={link.for}>
             <a target="blank" href={link.href}>
-              <Icon icon={link.icon} className="theme-animate text-5xl" />
+              <Icon
+                forr={link.for}
+                icon={link.icon}
+                className="theme-animate text-5xl"
+              />
             </a>
           </li>
         ))}
