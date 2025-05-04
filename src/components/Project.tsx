@@ -17,7 +17,7 @@ export default function Project({ project }: ProjectProps) {
 
   return (
     <article
-      className="group w-[calc(100%-30px)] lg:w-full theme-animate px-4 py-4 rounded-xl bg-card flex flex-col gap-1 mx-auto h-full"
+      className="group w-[calc(100%-30px)] lg:w-full theme-animate px-4 py-4 rounded-xl bg-card flex flex-col gap-1 mx-auto"
       aria-labelledby={`project-${project.name}`}
     >
       <header className="flex flex-col gap-1">
@@ -57,7 +57,9 @@ export default function Project({ project }: ProjectProps) {
             {formatDate(project.createdAt)}
           </p>
           {project.links.map((link) => (
-            <Icon key={link.href} forr={link.for} className="text-xl" />
+            <a key={link.href} href={link.href}>
+              <Icon forr={link.for} className="text-xl" />
+            </a>
           ))}
         </div>
         <ExpandButton toggle={toggle} isExpanded={isExpanded} />

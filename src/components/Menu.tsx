@@ -11,6 +11,8 @@ import MenuButton from "./MenuButton";
 export default function Menu() {
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
   const toggle = () => setIsMenuOpened((prev) => !prev);
+  const close = () => setIsMenuOpened(false);
+  
   const pathname = usePathname();
 
   return (
@@ -28,6 +30,7 @@ export default function Menu() {
               isSelected={pathname == link.href}
               link={link}
               key={link.text}
+              onClick={close}
             />
           ))}
         </ul>
