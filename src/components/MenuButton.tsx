@@ -19,7 +19,7 @@ export default function MenuButton({
       <span
         className={cn(
           "block h-0.5 w-8 bg-foreground transition-transform duration-300 ease-in-out",
-          isMenuOpened ? "rotate-45 translate-y-4" : ""
+          isMenuOpened ? "rotate-45 translate-y-3 translate-x-0.4" : ""
         )}
       />
       <span
@@ -31,7 +31,7 @@ export default function MenuButton({
       <span
         className={cn(
           "block h-0.5 w-8 bg-foreground transition-transform duration-300 ease-in-out",
-          isMenuOpened ? "-rotate-45 -translate-y-4" : ""
+          isMenuOpened ? "-rotate-45 -translate-y-2" : ""
         )}
       />
     </button>

@@ -1,5 +1,13 @@
 import React from "react";
-import { IconType } from "react-icons";
+import { FaLinkedin, FaDiscord, FaGithub } from "react-icons/fa";
+import { MdLiveTv } from "react-icons/md";
+
+export const iconMap = {
+    FaGithub,
+    FaDiscord,
+    FaLinkedin,
+    MdLiveTv
+}
 
 export interface LayoutBasicProps {
     children: Readonly<React.ReactNode>
@@ -10,8 +18,8 @@ export interface INavBarLink {
     href: string;
 }
 
-export interface IPersonalLink {
-    icon: IconType;
+export interface ILinkIcon {
+    icon: keyof typeof iconMap;
     href: string;
     for: string;
 }
@@ -23,6 +31,5 @@ export interface IProject {
     subDescription: string | null;
     time: string;
     createdAt: Date;
-    github: string | null;
-    live: string | null;
+    links: ILinkIcon[];
 }

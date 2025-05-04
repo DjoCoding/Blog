@@ -18,7 +18,7 @@ export default function Menu() {
       <MenuButton isMenuOpened={isMenuOpened} onClick={toggle} />
       <nav
         className={cn(
-          "absolute inset-0 bg-black transition-all duration-300 lg:static lg:bg-transparent lg:h-fit",
+          "z-900 absolute inset-0 bg-black transition-all duration-300 lg:static lg:bg-transparent lg:h-fit",
           isMenuOpened ? "max-lg:translate-x-[0%]" : "max-lg:translate-x-[100%]"
         )}
       >

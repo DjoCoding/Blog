@@ -1,12 +1,14 @@
 import React from "react";
 
-import { ColorMap, PersonalLinks } from "@/constants";
-import { cn } from "@/utils";
+import { PersonalLinks } from "@/constants";
+import Icon from "./Icon";
 
 export default function Welcome() {
   return (
     <div className="px-4 lg:px-0 py-2 w-full my-16 flex flex-col gap-4">
-      <h1 className="theme-animate text-4xl font-bold text-foreground">Hi there 👻</h1>
+      <h1 className="theme-animate text-4xl font-bold text-foreground">
+        Hi there 👻
+      </h1>
       <p className="theme-animate text-lg font-normal text-foreground">
         My name is Djaoued. Welcome to my blog.
       </p>
@@ -14,12 +16,7 @@ export default function Welcome() {
         {PersonalLinks.map((link) => (
           <li key={link.for}>
             <a target="blank" href={link.href}>
-              {
-                <link.icon
-                  size={40}
-                  className={cn("theme-animate bg-background", ColorMap[link.for])}
-                />
-              }
+              <Icon icon={link.icon} className="theme-animate text-5xl" />
             </a>
           </li>
         ))}
