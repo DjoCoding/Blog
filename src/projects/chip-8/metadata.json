@@ -1,0 +1,14 @@
+{
+    "title": "CHIP-8 Emulator",
+    "name": "chip-8",
+    "description": "Wrote a CHIP-8 emulator in C using SDL for graphics and input handling.",
+    "time": "12h",
+    "createdAt": "2025-04-05",
+    "subDescription": "A low-level systems project that involved implementing the full instruction set of the CHIP-8 virtual machine, including memory management, register simulation, timers, and display handling using SDL2. The emulator supports loading and running original CHIP-8 ROMs and renders the display at 60Hz. It was a hands-on experience in decoding binary opcodes, managing emulated hardware, and integrating audio/keyboard I/O. This project improved my debugging skills and reinforced my understanding of CPU architecture and binary-level computation.",
+    "links": [
+        {
+            "for": "github",
+            "href": "https://github.com/DjoCoding/c8"
+        }
+    ]
+}

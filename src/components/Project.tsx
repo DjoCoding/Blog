@@ -57,12 +57,7 @@ export default function Project({ project }: ProjectProps) {
             {formatDate(project.createdAt)}
           </p>
           {project.links.map((link) => (
-            <Icon
-              key={link.href}
-              forr={link.for}
-              icon={link.icon}
-              className="text-xl"
-            />
+            <Icon key={link.href} forr={link.for} className="text-xl" />
           ))}
         </div>
         <ExpandButton toggle={toggle} isExpanded={isExpanded} />

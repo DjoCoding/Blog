@@ -5,10 +5,14 @@ import path from "path";
 import fs from "fs";
 
 import { IProject } from "@/types";
-import { ColorMap, PersonalProjects } from "@/constants";
+import { ColorMap } from "@/constants";
+
 import { cn } from "@/utils";
+
 import MarkdownContent from "@/components/MarkdownContent";
 import Icon from "@/components/Icon";
+
+import { GET as getProjects } from "@/backend/projects";
 
 export async function generateMetadata({
   params,
@@ -16,7 +20,8 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const project = PersonalProjects.find((p) => p.name === slug);
+  const personalProjects = getProjects();
+  const project = personalProjects.find((p) => p.name === slug);
   const title = project ? project.title : "";
   return {
     title,
@@ -41,7 +46,8 @@ async function getProject(title: string) {
   if (!fs.existsSync(filepath)) return null;
 
   const content = fs.readFileSync(filepath, "utf-8");
-  const data = PersonalProjects.find((project) => project.title) as IProject;
+  const personalProjects = getProjects();
+  const data = personalProjects.find((project) => project.title) as IProject;
 
   return {
     content,
@@ -67,7 +73,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <a href={link.href} target="blank">
               <Icon
                 forr={link.for}
-                icon={link.icon}
                 className={cn("theme-animate text-4xl", ColorMap[link.for])}
               ></Icon>
             </a>

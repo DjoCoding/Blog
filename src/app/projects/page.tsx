@@ -1,9 +1,9 @@
-import Projects from "@/components/Projects";
 import { Metadata } from "next";
+import Projects from "@/components/Projects";
 
 export const metadata: Metadata = {
-  title: "Projects"
-}
+  title: "Projects",
+};
 
 export default function ProjectsPage() {
   return (
