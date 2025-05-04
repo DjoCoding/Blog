@@ -52,6 +52,8 @@ export const LinkTypeToIconKeyMap: Record<LinkType, IconType> = {
     live: MdLiveTv
 }
 
+export const pathToProjectsFolder = "src/projects";
+
 // export const PersonalProjects: IProject[] = [
 //     {
 //         title: "Regex Engine",

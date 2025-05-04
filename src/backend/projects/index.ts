@@ -1,28 +1,17 @@
-import { IProject } from "@/types";
 import fs from "fs";
 import path from "path";
 
+import { getProjectMetaData } from "@/helpers";
+import { pathToProjectsFolder } from "@/constants";
+
 export function GET() {
-    const pathToProjectDir = path.join(process.cwd(), "src/projects");
-    const projects = fs.readdirSync(pathToProjectDir);
-    const projectsMetadata = projects.map((project) => {
-      const filepath = path.join(
-        process.cwd(),
-        "src/projects",
-        `${project}/metadata.json`
-      );
+  const pathToProjectDir = path.join(process.cwd(), pathToProjectsFolder);
   
-      if (!fs.existsSync(filepath)) return null;
-  
-      const fileContent = fs.readFileSync(filepath).toString();
-      try {
-        const json = JSON.parse(fileContent) as IProject;
-        return json;
-      } catch (err) {
-        console.log(err);
-        return null;
-      }
-    });
-  
-    return projectsMetadata.filter((data) => data !== null);
-  }
+  // get project names
+  const names = fs.readdirSync(pathToProjectDir);
+
+  // return all the projects metadata that are not null
+  return names
+  .map(name => getProjectMetaData(name))
+  .filter((data) => data !== null);
+}
