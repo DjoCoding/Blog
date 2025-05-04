@@ -11,7 +11,7 @@ interface ProjectProps {
 export default function Project({ project }: ProjectProps) {
   return (
     <Link
-      href="/"
+      href={`/projects/${project.name}`}
       className="group w-[calc(100%-30px)] lg:w-full theme-animate px-4 py-4 rounded-xl bg-card flex flex-col gap-2 mx-auto"
     >
       <h2 className="theme-animate text-2xl lg:text-3xl font-bold text-primary">

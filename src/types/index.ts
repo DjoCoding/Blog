@@ -18,6 +18,7 @@ export interface IPersonalLink {
 
 export interface IProject {
     title: string;
+    name:  string;
     description: string;
     subDescription: string | null;
     time: string;

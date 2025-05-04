@@ -44,6 +44,7 @@ export const ColorMap: Record<string, string> = {
 export const PersonalProjects: IProject[] = [
     {
         title: "Regex Engine",
+        name: "regex-engine",
         description: "Built a regex compiler in C that parses expressions, constructs an NFA, and performs pattern matching on input strings.",
         time: "10h",
         createdAt: new Date("2025-04-10"),
@@ -53,6 +54,7 @@ export const PersonalProjects: IProject[] = [
     },
     {
         title: "Online Class Analyzer Extension",
+        name: "online-class-analyzer",
         description: "Developed a Chrome extension that analyzes recorded class sessions by syncing video with multiple audio streams and generating participation stats.",
         time: "15h",
         createdAt: new Date("2025-04-24"),
@@ -62,6 +64,7 @@ export const PersonalProjects: IProject[] = [
     },
     {
         title: "CHIP-8 Emulator",
+        name: "chip-8",
         description: "Wrote a CHIP-8 emulator in C using SDL for graphics and input handling.",
         time: "12h",
         createdAt: new Date("2025-04-05"),
@@ -71,6 +74,7 @@ export const PersonalProjects: IProject[] = [
     },
     {
         title: "Generic Hashmap in C",
+        name: "hashmap-in-C",
         description: "Designed a generic hashmap implementation using macros in C, similar to the generic linked list pattern.",
         time: "6h",
         createdAt: new Date("2025-05-01"),
