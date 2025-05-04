@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.variable}>
-      <body className="flex flex-col min-h-screen mb-8 overflow-x-hidden">
+      <body className="flex flex-col min-h-screen mb-8 overflow-x-hidden max-w-lvw">
         <NavBar />
         {children}
       </body>

@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Personal Blog Application
 
-## Getting Started
+A blog application built using **Next.js**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📚 Blogs Management
+
+To add a new blog, follow these steps:
+
+1. Create a new folder under the directory:  
+   `src/projects/<name>`
+
+2. Inside the newly created folder, create the following files:
+   - `content.md`: Contains the Markdown content for the blog post.
+   - `metadata.json`: Holds metadata used for static site generation (SSG).
+
+---
+
+## 📁 Files Specification
+
+### `content.md`
+
+- A Markdown file used to generate the blog content displayed in detail view.
+
+### `metadata.json`
+
+- This file should have the following structure:
+
+```json
+{
+  "title": "string",
+  "name": "string",
+  "description": "string",
+  "time": "TimeFormat",
+  "createdAt": "DateFormat",
+  "subDescription": "string",
+  "links": [
+    {
+      "for": "LinkType",
+      "href": "string"
+    }
+  ]
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Types
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```typescript
+type LinkType = "github" | "discord" | "linkedin" | "live";
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+type TimeFormat = string; // should follow the format "<hours>h<minutes>min<seconds>s"
 
-## Learn More
+type DateFormat = string; // should follow the format "YYYY-MM-DD"
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Note
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The name of the new blog folder `name` and the `metadata.json->name` should be identical.
