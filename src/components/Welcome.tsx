@@ -5,9 +5,9 @@ import Icon from "./Icon";
 
 export default function Welcome() {
   return (
-    <div className="px-4 lg:px-0 py-2 w-full my-16 flex flex-col gap-4">
+    <div className="px-4 lg:px-0 w-full pb-8 flex flex-col gap-4">
       <h1 className="theme-animate text-4xl font-bold text-foreground">
-        Hi there 👻
+        Hi there 😎
       </h1>
       <p className="theme-animate text-lg font-normal text-foreground">
         My name is Djaoued. Welcome to my blog.

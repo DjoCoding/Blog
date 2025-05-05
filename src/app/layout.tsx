@@ -26,7 +26,9 @@ export default function RootLayout({
     <html lang="en" className={poppins.variable}>
       <body className="flex flex-col min-h-screen mb-8 overflow-x-hidden max-w-lvw">
         <NavBar />
-        {children}
+        <div className="w-full grow flex lg:mt-8 py-8">
+          {children}
+        </div>
       </body>
     </html>
   );

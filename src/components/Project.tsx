@@ -17,7 +17,7 @@ export default function Project({ project }: ProjectProps) {
 
   return (
     <article
-      className="group w-[calc(100%-30px)] lg:w-full theme-animate px-4 py-4 rounded-xl bg-card flex flex-col gap-1 mx-auto"
+      className="group lg:w-full theme-animate px-4 py-4 rounded-xl bg-card flex flex-col gap-1 mx-auto"
       aria-labelledby={`project-${project.name}`}
     >
       <header className="flex flex-col gap-1">
