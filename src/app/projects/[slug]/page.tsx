@@ -8,8 +8,8 @@ import { cn } from "@/utils";
 import MarkdownContent from "@/components/MarkdownContent";
 import Icon from "@/components/Icon";
 
-import { GET as getProjects } from "@/backend/projects/index";
-import { GET as getProject } from "@/backend/projects/[name]/index";
+import { GET as getProjects } from "@/services/projects/index";
+import { GET as getProject } from "@/services/projects/[name]/index";
 import { getProjectMetaData } from "@/helpers";
 
 export async function generateMetadata({

@@ -1,6 +1,6 @@
 import { IProject } from "@/types";
 import Project from "./Project";
-import { GET as getProjects } from "@/backend/projects";
+import { GET as getProjects } from "@/services/projects";
 
 interface ProjectsProps {
   name?: string;
